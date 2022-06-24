@@ -127,6 +127,7 @@ nav {
   font-size: $heading-2;
 }
 .welcome-paragraph {
+  max-width: 600px;
   font-size: $regualr-paragraph;
 }
 
@@ -134,7 +135,7 @@ nav {
   background-color: $accent-red;
   color: white;
   @include flexCenter();
-  padding: 15em 0;
+  padding: 10em 0;
 }
 .working-hours-title {
   font-size: $heading-2;
@@ -150,4 +151,16 @@ nav {
 }
 .schedule-hours {
   line-height: 2em;
+}
+
+footer {
+  padding: 2.5em 0;
+  @include flexCenter();
+}
+.attribution {
+  text-align: center;
+  color: $black;
+  a {
+    color: $accent-red;
+  }
 }

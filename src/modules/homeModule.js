@@ -55,6 +55,24 @@ export default function populateHome() {
   workingHoursContainer.appendChild(workHours);
   workTimeSection.appendChild(workingHoursContainer);
   content.appendChild(workTimeSection);
+
+  //   Footer
+  const footer = document.createElement("footer");
+  const footerContainer = document.createElement("div");
+  footerContainer.classList.add("container");
+
+  const attributionText = document.createElement("p");
+  attributionText.textContent = "Photo by ";
+  const attributionLink = document.createElement("a");
+  attributionLink.classList.add("attribution");
+  attributionText.classList.add("attribution");
+  attributionLink.textContent = "Divani (Diva)";
+  attributionLink.href =
+    "https://unsplash.com/@fullboardphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText";
+  attributionText.appendChild(attributionLink);
+  footerContainer.appendChild(attributionText);
+  footer.appendChild(footerContainer);
+  content.appendChild(footer);
 }
 
 function scheduleCreator(daysText, hoursText) {
