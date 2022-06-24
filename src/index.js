@@ -7,7 +7,6 @@ console.log("hello from index.js");
 
 populateHome();
 
-const content = document.querySelector("#content");
 let navigation = document.querySelectorAll(".nav-item");
 const home = navigation[0];
 const menu = navigation[1];

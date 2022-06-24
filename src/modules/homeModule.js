@@ -3,11 +3,11 @@ import coverImage from "../img/Cover.jpg";
 
 export default function populateHome() {
   const content = document.querySelector("#content");
+  emptyContent();
 
   //   Landing image
   const divImage = document.createElement("div");
   divImage.classList.add("landing-image");
-  emptyContent();
   const landingImage = document.createElement("img");
   landingImage.src = coverImage;
   landingImage.classList.add("landing-image");
@@ -35,11 +35,36 @@ export default function populateHome() {
   content.appendChild(welcomeSection);
 
   //   Working hours section
-  const workTimeSection = docuemnt.CreateElemnt("section");
+  const workTimeSection = document.createElement("section");
   const workingHoursContainer = document.createElement("div");
   workingHoursContainer.classList.add("container");
   workTimeSection.classList.add("working-hours");
-  const workTimeTitle = doucment.createElement("h2");
+  const workTimeTitle = document.createElement("h2");
   workTimeTitle.textContent = "-Our working hours-";
   workTimeTitle.classList.add("working-hours-title");
+  const workHours = document.createElement("div");
+  workHours.classList.add("working-schedule");
+
+  workHours.appendChild(scheduleCreator("Monday - Thursday", "10:00 - 22:00"));
+
+  workHours.appendChild(scheduleCreator("Friday", "16:00 - 00:00"));
+
+  workHours.appendChild(scheduleCreator("Saturday - Sunday", "12:00 - 18:00"));
+
+  workingHoursContainer.appendChild(workTimeTitle);
+  workingHoursContainer.appendChild(workHours);
+  workTimeSection.appendChild(workingHoursContainer);
+  content.appendChild(workTimeSection);
+}
+
+function scheduleCreator(daysText, hoursText) {
+  const group = document.createElement("div");
+  group.classList.add("schedule-hours");
+  const days = document.createElement("p");
+  days.textContent = daysText;
+  group.appendChild(days);
+  const hours = document.createElement("p");
+  hours.textContent = hoursText;
+  group.appendChild(hours);
+  return group;
 }

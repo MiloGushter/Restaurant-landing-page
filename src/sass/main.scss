@@ -131,4 +131,23 @@ nav {
 }
 
 .working-hours {
+  background-color: $accent-red;
+  color: white;
+  @include flexCenter();
+  padding: 15em 0;
+}
+.working-hours-title {
+  font-size: $heading-2;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.working-schedule {
+  display: flex;
+  flex-direction: column;
+  font-size: $regualr-paragraph;
+  text-align: center;
+  gap: 24px;
+}
+.schedule-hours {
+  line-height: 2em;
 }
