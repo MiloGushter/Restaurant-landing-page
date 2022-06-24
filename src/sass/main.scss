@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap");
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Color styles */
+$black: hsla(0, 0%, 13.7%, 1);
+$pale-orange: hsla(34, 37.7%, 88%, 1);
+$accent-red: hsla(357, 77.7%, 54.3%, 1);
+
+/* Text-size styles */
+$heading-1: 4px;
+$heading-2: 3rem;
+$heading-3: 2rem;
+$regualr-paragraph: 1.5rem;
+$small-paragraph: 1.25rem;
+
+$lobster: "Lobster Two", cursive;
+$roboto: "Roboto Slab", serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $black;
+  font-family: $roboto;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+// .nav-active {
+//   border-bottom: 2px solid white;
+// }
+
+.nav-item {
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: $heading-3;
+  font-family: $lobster;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+header {
+  background-color: $accent-red;
+  height: 10vh;
+  @include flexCenter();
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
