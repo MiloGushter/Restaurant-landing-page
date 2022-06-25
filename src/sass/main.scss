@@ -230,3 +230,50 @@ footer {
   row-gap: 4em;
   color: white;
 }
+
+.reservation {
+  background-color: $pale-orange;
+  @include flexCenter();
+  padding: 5em 0;
+}
+.reservation-para {
+  margin-bottom: 1em;
+  max-width: 700px;
+}
+
+.reservation-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 500px));
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: space-between;
+  row-gap: 10px;
+  padding: 4em 0em;
+}
+
+#full-name {
+  grid-row: 2;
+}
+#phone-number {
+  grid-row: 4;
+}
+textarea[name="message"] {
+  grid-row: 2/-1;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  padding: 0.75em 0.5em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
