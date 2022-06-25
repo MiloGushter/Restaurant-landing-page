@@ -51,6 +51,7 @@ $roboto: "Roboto Slab", serif;
 body {
   color: $black;
   font-family: $roboto;
+  font-size: $regualr-paragraph;
 }
 
 img {
@@ -65,6 +66,18 @@ ul {
   list-style: none;
 }
 
+h1 {
+  font-size: $heading-1;
+}
+
+h2 {
+  font-size: $heading-2;
+}
+
+h3 {
+  font-size: $heading-3;
+}
+
 .container {
   width: 85%;
   max-width: 1200px;
@@ -75,8 +88,7 @@ header {
   font-family: $lobster;
   color: white;
   @include flexCenter();
-  padding: 3em 0;
-  max-height: 10vh;
+  height: 10vh;
 }
 
 nav {
@@ -110,7 +122,7 @@ nav {
 
 .landing-image {
   width: 100%;
-  max-height: 60vh;
+  max-height: 50vh;
   object-fit: cover;
 }
 
@@ -118,7 +130,7 @@ nav {
   background-color: $pale-orange;
   color: $black;
   @include flexCenter();
-  padding: 15em 0;
+  height: 40vh;
 }
 .welcome-text {
   max-width: 700px;
@@ -163,4 +175,56 @@ footer {
   a {
     color: $accent-red;
   }
+}
+
+.our-recommendation {
+  background-color: $pale-orange;
+  @include flexCenter();
+  height: 90vh;
+}
+
+.our-recommendation-title,
+.menu-title {
+  margin-bottom: 1em;
+}
+
+.recommended-pasta {
+  display: flex;
+  gap: 5em;
+  color: $black;
+}
+
+.dish-wrapper {
+  max-width: 500px;
+}
+
+.dish-title {
+  margin-bottom: 0.5em;
+}
+
+.dish-para {
+  font-size: $small-paragraph;
+  margin-bottom: 1em;
+}
+
+.img-wrap {
+  object-fit: cover;
+}
+
+.dish-image {
+  border-radius: 24px;
+}
+
+.menu {
+  background-color: $accent-red;
+  @include flexCenter();
+  padding: 5em 0;
+  color: white;
+}
+
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4em;
+  color: white;
 }
