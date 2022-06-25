@@ -166,10 +166,12 @@ nav {
 }
 
 footer {
+  background-color: $pale-orange;
   padding: 2.5em 0;
   @include flexCenter();
 }
 .attribution {
+  font-size: $small-paragraph;
   text-align: center;
   color: $black;
   a {

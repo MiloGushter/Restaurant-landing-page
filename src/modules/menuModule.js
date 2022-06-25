@@ -35,8 +35,11 @@ export default function populateMenu() {
       carbonara
     )
   );
+
   ourRecommendationContainer.appendChild(recommendationPastaWrapper);
   ourRecommendationSection.appendChild(ourRecommendationContainer);
+
+  content.appendChild(ourRecommendationSection);
 
   const menuSection = document.createElement("section");
   menuSection.classList.add("menu");
@@ -80,8 +83,23 @@ export default function populateMenu() {
   menuContainer.appendChild(menuWrapper);
   menuSection.appendChild(menuContainer);
 
-  content.appendChild(ourRecommendationSection);
   content.appendChild(menuSection);
+
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  const footerContainer = document.createElement("div");
+  footerContainer.classList.add("container");
+  const attributionText = document.createElement("p");
+  attributionText.textContent = "All photos and info are from ";
+  const attributionLink = document.createElement("a");
+  attributionText.classList.add("attribution");
+  attributionLink.classList.add("attribution");
+  attributionLink.textContent = "this blog";
+  attributionLink.href = "https://erudus.com/editorial/the-food-agenda/most-famous-pasta-dishes";
+  attributionText.appendChild(attributionLink);
+  footerContainer.appendChild(attributionText);
+  footer.appendChild(footerContainer);
+  content.appendChild(footer);
 }
 
 function dishCreator(dishName, dishDescription, dishImg) {
