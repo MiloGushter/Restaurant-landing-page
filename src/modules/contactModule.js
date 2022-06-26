@@ -42,12 +42,17 @@ export default function populateContact() {
   const messageLabel = document.createElement("label");
   messageLabel.textContent = "Your message";
 
+  const submitButton = document.createElement("button");
+  submitButton.classList.add("submit-button");
+  submitButton.textContent = "Submit";
+
   reservationForm.appendChild(fullNameLabel);
   reservationForm.appendChild(fullNameInput);
   reservationForm.appendChild(messageLabel);
   reservationForm.appendChild(messageArea);
   reservationForm.appendChild(phoneNumberLabel);
   reservationForm.appendChild(phoneNumberInput);
+  reservationForm.appendChild(submitButton);
 
   reservationContainer.appendChild(reservationForm);
 

@@ -278,6 +278,21 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.submit-button {
+  cursor: pointer;
+  max-width: 200px;
+  padding: 0.75em 1em;
+  margin-top: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: $accent-red;
+  color: white;
+  transition: background-color 300ms ease-in-out;
+}
+.submit-button:hover {
+  background-color: rgb(187, 26, 50);
+}
+
 .number-footer {
   background-color: $accent-red;
   color: white;
