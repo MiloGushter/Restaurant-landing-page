@@ -53,4 +53,25 @@ export default function populateContact() {
 
   reservationSection.appendChild(reservationContainer);
   content.appendChild(reservationSection);
+
+  const ourNumberFooter = document.createElement("footer");
+  ourNumberFooter.classList.add("number-footer");
+  const ourNumberContainer = document.createElement("div");
+  ourNumberContainer.classList.add("container");
+  const ourNumbersTitle = document.createElement("h2");
+  ourNumbersTitle.textContent = "-Our numbers-";
+  ourNumbersTitle.classList.add("number-title");
+  const ourNumbersReservation = document.createElement("p");
+  ourNumbersReservation.classList.add("number-para");
+  ourNumbersReservation.textContent = "Reservation - 555-333";
+  const ourNumbersDelivery = document.createElement("p");
+  ourNumbersDelivery.classList.add("number-para");
+  ourNumbersDelivery.textContent = "Food delivery - 333-555";
+
+  ourNumberContainer.appendChild(ourNumbersTitle);
+  ourNumberContainer.appendChild(ourNumbersReservation);
+  ourNumberContainer.appendChild(ourNumbersDelivery);
+  ourNumberFooter.appendChild(ourNumberContainer);
+
+  content.appendChild(ourNumberFooter);
 }

@@ -277,3 +277,17 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.number-footer {
+  background-color: $accent-red;
+  color: white;
+  @include flexCenter();
+  text-align: center;
+}
+
+.number-title {
+  margin-bottom: 1em;
+}
+.number-para {
+  margin-bottom: 0.5em;
+}
